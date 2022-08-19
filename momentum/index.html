@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+          <div class="btn_play">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+
+          <div class="name_line">
+            <div class="name_track"></div>
+
+            <div class="timeline">
+              <div class="progress"></div>
+            </div>
+          </div>
+
+          <div class="time_track">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length">0:00</div>
+          </div>
+          <div class="volume_container">
+            <div class="volume-button">
+              <div class="volume icono-volumeMedium">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 1792 1792"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M832 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45zm384 544q0 76-42.5 141.5t-112.5 93.5q-10 5-25 5-26 0-45-18.5t-19-45.5q0-21 12-35.5t29-25 34-23 29-36 12-56.5-12-56.5-29-36-34-23-29-25-12-35.5q0-27 19-45.5t45-18.5q15 0 25 5 70 27 112.5 93t42.5 142zm256 0q0 153-85 282.5t-225 188.5q-13 5-25 5-27 0-46-19t-19-45q0-39 39-59 56-29 76-44 74-54 115.5-135.5t41.5-173.5-41.5-173.5-115.5-135.5q-20-15-76-44-39-20-39-59 0-26 19-45t45-19q13 0 26 5 140 59 225 188.5t85 282.5zm256 0q0 230-127 422.5t-338 283.5q-13 5-26 5-26 0-45-19t-19-45q0-36 39-59 7-4 22.5-10.5t22.5-10.5q46-25 82-51 123-91 192-227t69-289-69-289-192-227q-36-26-82-51-7-4-22.5-10.5t-22.5-10.5q-39-23-39-59 0-26 19-45t45-19q13 0 26 5 211 91 338 283.5t127 422.5z"
+                    fill="#fff"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="play-list"></ul>
+      </div>
+
+      <div class="weather">
+        <input type="text" class="city" value="Minsk" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="welcome">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="name" />
+      </div>
+    </main>
+    <footer class="footer">
+
+      <div class="notes"></div>
+      <div class="container_notes">
+        <form class="input_btn" action="#">
+          <input
+            class="input_notes lang_notes"
+            name="notes"
+            autofocus
+            placeholder="Add note..."
+          />
+          <button class="lang_btn_notes">add</button>
+        </form>
+        <ol class="list_notes"></ol>
+      </div>
+      <div class="quotes">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="settings"></div>
+      <div class="popup"></div>
+      <ul class="container_settings">
+        <li>
+          <p class="lang_language">Change Language:</p>
+          <div>
+            <button class="btn_setting lang_btn">english</button>
+          </div>
+        </li>
+        <li>
+          <p class="lang_source">Photo Source:</p>
+          <button class="btn_setting settingApi" id="source">
+            <select class="selectApi" name="sourse">
+              <option value="GitHub" selected>GitHub</option>
+              <option value="Unsplash API">Unsplash API</option>
+              <option value="Flickr API">Flickr API</option>
+            </select>
+          </button>
+        </li>
+        <li>
+          <p class="lang_tags">Tags Photo:</p>
+          <div>
+            <input class="input_tags" type="text" />
+          </div>
+        </li>
+        <li>
+          <p class="lang_time">Time:</p>
+          <div>
+            <button class="btn_setting time_btn">on</button>
+          </div>
+        </li>
+        <li>
+          <p class="lang_date">Date:</p>
+          <div>
+            <button class="btn_setting date_btn">on</button>
+          </div>
+        </li>
+        <li>
+          <p class="lang_welcome">Welcome:</p>
+          <div>
+            <button class="btn_setting welcome_btn">on</button>
+          </div>
+        </li>
+        <li>
+          <p class="lang_quote">Quote:</p>
+          <div>
+            <button class="btn_setting quotes_btn">on</button>
+          </div>
+        </li>
+        <li>
+          <p class="lang_weather">Weather:</p>
+          <div>
+            <button class="btn_setting weather_btn">on</button>
+          </div>
+        </li>
+        <li>
+          <p class="lang_player">Player:</p>
+          <div>
+            <button class="btn_setting player_btn">on</button>
+          </div>
+        </li>
+        <li>
+          <div class="info">
+             <a href="https://rs.school/js-stage0/">
+            <img src="./assets/svg/rs_school_js.svg" alt="rs_school_js_icon">
+          </a>
+          <a href="https://github.com/FilMaxim/">
+            <img src="./assets/svg/github.svg" alt="github_icon">
+          </a>
+          </div>
+        </li>
+      </ul>
+    </footer>
+    <script type="module" src="js/script.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/check.js"></script>
+
+  </body>
+</html>
